@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мой mobile сайт</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+   <main class="feed">
+        
+        <div class="photo-block">
+            <img src="blok1.png" alt="Фото 1">
+        </div>
+
+        <div class="music-wrapper">
+            <div class="circular-player">
+                <svg class="text-ring" viewBox="0 0 100 100">
+                    <path id="circlePath" d="M 50, 50 m -42, 0 a 42,42 0 1,1 84,0 a 42,42 0 1,1 -84,0" fill="none" />
+                    <text>
+                        <textPath href="#circlePath" startOffset="0%" textLength="264">
+                            включить музыку • включить музыку • включить музыку • 
+                        </textPath>
+                    </text>
+                </svg>
+                <button id="play-pause-btn" class="play-btn">
+                    <svg id="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                    <svg id="pause-icon" viewBox="0 0 24 24" style="display:none;"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+                </button>
+            </div>
+            <audio id="audio-track" loop src="music.mp3"></audio>
+        </div>
+
+        <div class="photo-block">
+            <img src="blok2.png" alt="Фото 2">
+        </div>
+
+        <a href="https://yandex.ru/maps/org/dvorets_brakosochetaniya_2/1063007010/?ll=30.364871%2C59.945392&z=16">
+            <div class="photo-block">
+                <img src="blok3.png" alt="Локация 1">
+            </div>
+        </a>
+
+        <a href="https://yandex.ru/maps/2/saint-petersburg/house/gorokhovaya_ulitsa_1/Z0kYdQZgSkQAQFtjfXVyd3xmYw==/?ll=30.310317%2C59.936057&z=16">
+            <div class="photo-block">
+                <img src="blok4.png" alt="Локация 2">
+            </div>
+        </a>
+
+        <div class="photo-block">
+            <img src="blok5.png" alt="Фото 5">
+        </div>
+
+        <div class="photo-block">
+            <img src="blok6.png" alt="Фото 6">
+        </div>
+
+        <div class="timer-container">
+            <div class="timer-title">До свадьбы осталось:</div>
+            <div class="timer-display">
+                <div class="timer-block">
+                    <span class="timer-number" id="days">00</span>
+                    <span class="timer-label">дней</span>
+                </div>
+                <div class="timer-block">
+                    <span class="timer-number" id="hours">00</span>
+                    <span class="timer-label">часов</span>
+                </div>
+                <div class="timer-block">
+                    <span class="timer-number" id="minutes">00</span>
+                    <span class="timer-label">минут</span>
+                </div>
+                <div class="timer-block">
+                    <span class="timer-number" id="seconds">00</span>
+                    <span class="timer-label">секунд</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="photo-block">
+            <img src="blok7.png" alt="Фото 7">
+        </div>
+
+        <div class="photo-block">
+            <img src="blok8.png" alt="Фото 8">
+        </div>
+
+        <div class="photo-block">
+            <img src="blok9.png" alt="Фото 9">
+        </div>
+
+        <div class="rsvp-container">
+            <form id="wedding-form">
+                
+                <div class="form-group">
+                    <label for="guest-name">ВАШЕ ИМЯ И ФАМИЛИЯ <span class="required">*</span></label>
+                    <input type="text" id="guest-name" name="name" required placeholder="Введите имя и фамилию">
+                </div>
+
+                <div class="form-group">
+                    <label>ПОДТВЕРДИТЕ ПРИСУТСТВИЕ: <span class="required">*</span></label>
+                    <div class="radio-group">
+                        <label class="custom-radio">
+                            <input type="radio" name="attendance" value="yes" required>
+                            <span class="radio-checkmark"></span>
+                            ДА, С УДОВОЛЬСТВИЕМ!
+                        </label>
+                        <label class="custom-radio">
+                            <input type="radio" name="attendance" value="no" required>
+                            <span class="radio-checkmark"></span>
+                            К СОЖАЛЕНИЮ, НЕ ПОЛУЧИТСЯ.
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>УКАЖИТЕ ВАШЕ ПРЕДПОЧТЕНИЕ В АЛКОГОЛЕ: <span class="required">*</span></label>
+                    <div class="checkbox-group">
+                        <label class="custom-checkbox">
+                            <input type="checkbox" name="alcohol" value="red-wine">
+                            <span class="checkbox-checkmark"></span>
+                            КРАСНОЕ ВИНО
+                        </label>
+                        <label class="custom-checkbox">
+                            <input type="checkbox" name="alcohol" value="white-wine">
+                            <span class="checkbox-checkmark"></span>
+                            БЕЛОЕ ВИНО
+                        </label>
+                        <label class="custom-checkbox">
+                            <input type="checkbox" name="alcohol" value="champagne">
+                            <span class="checkbox-checkmark"></span>
+                            ШАМПАНСКОЕ
+                        </label>
+                        <label class="custom-checkbox">
+                            <input type="checkbox" name="alcohol" value="vodka">
+                            <span class="checkbox-checkmark"></span>
+                            ВОДКА
+                        </label>
+                        <label class="custom-checkbox">
+                            <input type="checkbox" name="alcohol" value="whiskey">
+                            <span class="checkbox-checkmark"></span>
+                            ВИСКИ
+                        </label>
+                        <label class="custom-checkbox">
+                            <input type="checkbox" name="alcohol" value="none">
+                            <span class="checkbox-checkmark"></span>
+                            НЕ ПЬЮ АЛКОГОЛЬ
+                        </label>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn">Отправить</button>
+            </form>
+        </div>
+
+        <div class="photo-block">
+            <img src="blok10.png" alt="Фото 10">
+        </div>
+
+        <div class="photo-block">
+            <img src="blok11.png" alt="Фото 11">
+        </div>
+
+   </main> 
+
+   <script>
+        // 1. Логика музыки
+        const audio = document.getElementById('audio-track');
+        const playBtn = document.getElementById('play-pause-btn');
+        const playIcon = document.getElementById('play-icon');
+        const pauseIcon = document.getElementById('pause-icon');
+
+        audio.volume = 0.4;
+
+        playBtn.addEventListener('click', () => {
+            if (audio.paused) {
+                audio.play().then(() => {
+                    playIcon.style.display = 'none';
+                    pauseIcon.style.display = 'block';
+                }).catch(err => console.log("Блокировка автоплея браузером"));
+            } else {
+                audio.pause();
+                playIcon.style.display = 'block';
+                pauseIcon.style.display = 'none';
+            }
+        });
+
+        // 2. Логика таймера
+        (function() {
+            const countDownDate = new Date("Jan 15, 2027 12:00:00").getTime();
+
+            const updateTimer = setInterval(function() {
+                const now = new Date().getTime();
+                const distance = countDownDate - now;
+
+                if (distance < 0) {
+                    clearInterval(updateTimer);
+                    document.getElementById("days").textContent = "00";
+                    document.getElementById("hours").textContent = "00";
+                    document.getElementById("minutes").textContent = "00";
+                    document.getElementById("seconds").textContent = "00";
+                    return;
+                }
+
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                document.getElementById("days").textContent = String(days).padStart(2, '0');
+                document.getElementById("hours").textContent = String(hours).padStart(2, '0');
+                document.getElementById("minutes").textContent = String(minutes).padStart(2, '0');
+                document.getElementById("seconds").textContent = String(seconds).padStart(2, '0');
+                
+            }, 1000);
+        })();
+
+        // --- 4. ОБРАБОТКА ФОРМЫ (ОТПРАВКА В VK ЧЕРЕЗ CLOUDFLARE WORKER) ---
+    const form = document.getElementById("wedding-form");
+
+    if (form) {
+        const submitBtn = form.querySelector(".submit-btn");
+
+        form.addEventListener("submit", async function (e) {
+            e.preventDefault();
+
+            // Новый URL Cloudflare Worker
+            const WORKER_URL = "https://annabumaga.awsjfe.workers.dev/";
+
+            // Сбор данных формы
+            const formData = new FormData(form);
+            const data = {
+                name: formData.get("name"),
+                attendance: formData.get("attendance"),
+                companion: formData.get("companion"),
+                children: formData.get("children"),
+                children_age: formData.get("children_age"),
+                preferences: formData.get("preferences"),
+                music: formData.get("music")
+            };
+
+            // Блокируем кнопку на время отправки
+            if (submitBtn) {
+                submitBtn.disabled = true;
+                submitBtn.innerText = "ОТПРАВКА...";
+            }
+
+            try {
+                const response = await fetch(WORKER_URL, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(data)
+                });
+
+                const result = await response.json();
+
+                if (response.ok && result.success) {
+                    alert("Спасибо за ваш ответ! Анкета успешно отправлена.");
+                    form.reset();
+                    if (childrenAgeInput) {
+                        childrenAgeInput.classList.add("hidden");
+                        childrenAgeInput.value = "";
+                    }
+                } else {
+                    alert("Произошла ошибка при отправке. Попробуйте еще раз.");
+                }
+            } catch (error) {
+                console.error("Ошибка сети или сервера:", error);
+                alert("Ошибка сети. Проверьте подключение.");
+            } finally {
+                if (submitBtn) {
+                    submitBtn.disabled = false;
+                    submitBtn.innerText = "ОТПРАВИТЬ";
+                }
+            }
+        });
+    }
+    </script>
+</body>
+</html>
