@@ -216,7 +216,7 @@
             }, 1000);
         })();
 
-        // --- 4. ОБРАБОТКА ФОРМЫ (ОТПРАВКА В VK ЧЕРЕЗ CLOUDFLARE WORKER) ---
+       // --- 4. ОБРАБОТКА ФОРМЫ (ОТПРАВКА В VK ЧЕРЕЗ CLOUDFLARE WORKER) ---
     const form = document.getElementById("wedding-form");
 
     if (form) {
@@ -237,7 +237,8 @@
                 children: formData.get("children"),
                 children_age: formData.get("children_age"),
                 preferences: formData.get("preferences"),
-                music: formData.get("music")
+                music: formData.get("music"),
+                alcohol: formData.getAll("alcohol") // <--- Добавили сбор выбранных чекбоксов алкоголя
             };
 
             // Блокируем кнопку на время отправки
@@ -260,10 +261,7 @@
                 if (response.ok && result.success) {
                     alert("Спасибо за ваш ответ! Анкета успешно отправлена.");
                     form.reset();
-                    if (childrenAgeInput) {
-                        childrenAgeInput.classList.add("hidden");
-                        childrenAgeInput.value = "";
-                    }
+                    // Если у вас есть логика скрытия возраста детей при сбросе формы, она сработает здесь
                 } else {
                     alert("Произошла ошибка при отправке. Попробуйте еще раз.");
                 }
